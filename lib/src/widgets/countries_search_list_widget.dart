@@ -187,11 +187,10 @@ class _Flag extends StatelessWidget {
                     style: Theme.of(context).textTheme.headlineSmall,
                   )
                 : country?.flagUri != null
-                    ? CircleAvatar(
-                        backgroundImage: AssetImage(
-                          country!.flagUri,
-                          package: 'intl_phone_number_input',
-                        ),
+                    ? Image.asset(
+                        country!.flagUri,
+                        package: 'intl_phone_number_input',
+                        width: MediaQuery.of(context).size.width * 0.1,
                       )
                     : SizedBox.shrink(),
           )
